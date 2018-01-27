@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FOVArea : MonoBehaviour {
     Transform parentBody;
-    public bool seenPlayer;
+    GameController gameController;
 
 	// Use this for initialization
 	void Start () {
         parentBody = transform.parent;
-        seenPlayer = false;
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame
@@ -24,7 +24,7 @@ public class FOVArea : MonoBehaviour {
         if(Physics.Raycast(parentBody.position, direction, out hit, 9999f, layerMask)){
             if(hit.collider.gameObject.tag == "Player")
             {
-                seenPlayer = true;
+                gameController.EndGame();
             }
         }
     }

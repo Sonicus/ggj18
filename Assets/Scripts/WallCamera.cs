@@ -7,16 +7,9 @@ public class WallCamera : MonoBehaviour, IEnemy {
     public float turnAngle = 45.0f;
     public float turnSpeed = 0.25f;
     private float turnedAngle = 0.0f;
-    FOVArea fovArea;
-
-    public bool CheckForDetection()
-    {
-        return fovArea.seenPlayer;
-    }
 
 	// Use this for initialization
 	void Start () {
-        fovArea = GetComponentInChildren<FOVArea>();
 	}
 	
 	// Update is called once per frame

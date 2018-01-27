@@ -4,6 +4,4 @@ using UnityEngine;
 
 public interface IEnemy {
 
-    bool CheckForDetection();
-
 }
