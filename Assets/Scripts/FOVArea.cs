@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FOVArea : MonoBehaviour {
     Transform parentBody;
-    bool seenPlayer;
+    public bool seenPlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +24,7 @@ public class FOVArea : MonoBehaviour {
         if(Physics.Raycast(parentBody.position, direction, out hit, 9999f, layerMask)){
             if(hit.collider.gameObject.tag == "Player")
             {
-                print("Seen");
+                seenPlayer = true;
             }
         }
     }

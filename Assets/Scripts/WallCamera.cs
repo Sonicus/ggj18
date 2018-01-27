@@ -11,7 +11,7 @@ public class WallCamera : MonoBehaviour, IEnemy {
 
     public bool CheckForDetection()
     {
-        return false;
+        return fovArea.seenPlayer;
     }
 
 	// Use this for initialization
