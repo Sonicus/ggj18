@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     AudioSource youDiedSound;
     AudioSource victorySound;
     FirstPersonController FPSController;
-    bool gameLost;
+    public bool gameLost;
     public int nextSceneIndex;
 
     // Use this for initialization
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
         blackOfDeath.CrossFadeAlpha(0.0f, 0.5f, true);
         youDiedSound = GameObject.Find("YouDiedSound").GetComponent<AudioSource>();
         victorySound = GameObject.Find("VictorySound").GetComponent<AudioSource>();
-        FPSController = GameObject.Find("FPSController").GetComponent<FirstPersonController>(); ;
+        FPSController = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>(); ;
 
         var enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
         enemies = new List<IEnemy>();

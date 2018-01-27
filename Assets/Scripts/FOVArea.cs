@@ -22,7 +22,7 @@ public class FOVArea : MonoBehaviour {
         var direction = collider.transform.position - parentBody.position;
         int layerMask = ~(1 << 9);
         if(Physics.Raycast(parentBody.position, direction, out hit, 9999f, layerMask)){
-            if(hit.collider.gameObject.tag == "Player")
+            if(hit.collider.gameObject.tag == "Player" && !gameController.gameLost)
             {
                 gameController.EndGame();
             }
