@@ -9,7 +9,7 @@ public class FOVArea : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         parentBody = transform.parent;
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame

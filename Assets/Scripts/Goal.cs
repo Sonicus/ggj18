@@ -8,7 +8,7 @@ public class Goal : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame

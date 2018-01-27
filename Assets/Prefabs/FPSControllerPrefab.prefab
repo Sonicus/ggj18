@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 82928196947045936}
   - component: {fileID: 136233641765267744}
   m_Layer: 8
-  m_Name: FPSController
+  m_Name: FPSControllerPrefab
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
