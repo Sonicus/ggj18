@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     Text resetText;
     Image blackOfDeath;
     AudioSource youDiedSound;
+    AudioSource victorySound;
     FirstPersonController FPSController;
     bool gameLost;
     public int nextSceneIndex;
@@ -28,6 +29,7 @@ public class GameController : MonoBehaviour
         blackOfDeath.canvasRenderer.SetAlpha(1.0f);
         blackOfDeath.CrossFadeAlpha(0.0f, 0.5f, true);
         youDiedSound = GameObject.Find("YouDiedSound").GetComponent<AudioSource>();
+        victorySound = GameObject.Find("VictorySound").GetComponent<AudioSource>();
         FPSController = GameObject.Find("FPSController").GetComponent<FirstPersonController>(); ;
 
         var enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
@@ -39,6 +41,13 @@ public class GameController : MonoBehaviour
     }
 
     public void NextLevel()
+    {
+        victorySound.enabled = true;
+        blackOfDeath.CrossFadeAlpha(1.0f, 1.0f, true);
+        Invoke("LoadNextLevel", 1.0f);
+    }
+
+    private void LoadNextLevel()
     {
         SceneManager.LoadScene(nextSceneIndex);
     }
