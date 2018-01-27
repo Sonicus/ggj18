@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33856680669151842}
   - component: {fileID: 65626660936721020}
   - component: {fileID: 23938393745936600}
-  - component: {fileID: 54584635468952332}
   - component: {fileID: 114375651017279582}
   m_Layer: 9
   m_Name: FOVArea
@@ -99,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866912378818050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.509216, y: 1, z: -37.625317}
+  m_LocalPosition: {x: -25.061783, y: 12.4, z: -15.72571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4074497822929582}
@@ -188,21 +187,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1056408291574234}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54584635468952332
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1056408291574234}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &65110214581275558
 BoxCollider:
   m_ObjectHideFlags: 1
