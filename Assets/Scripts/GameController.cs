@@ -84,6 +84,10 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Application.Quit();
+        }
         if (gameLost)
         {
             CheckForReset();
