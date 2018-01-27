@@ -8,7 +8,7 @@ public class FOVArea : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        parentBody = GetComponentInParent<Transform>();
+        parentBody = transform.parent;
         seenPlayer = false;
 	}
 	
@@ -20,7 +20,8 @@ public class FOVArea : MonoBehaviour {
     {
         RaycastHit hit;
         var direction = collider.transform.position - parentBody.position;
-        if(Physics.Raycast(parentBody.position, direction, out hit, 9999f)){
+        int layerMask = ~(1 << 9);
+        if(Physics.Raycast(parentBody.position, direction, out hit, 9999f, layerMask)){
             if(hit.collider.gameObject.tag == "Player")
             {
                 print("Seen");
