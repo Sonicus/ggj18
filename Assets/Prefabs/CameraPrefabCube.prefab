@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866912378818050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.061783, y: 12.4, z: -15.72571}
+  m_LocalPosition: {x: -39.509216, y: 1, z: -37.625317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4074497822929582}
@@ -147,8 +147,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1056408291574234}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -251,3 +251,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnAngle: 45
   turnSpeed: 0.25
+  initialAngle: 0
