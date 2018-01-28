@@ -4469,6 +4469,11 @@ Prefab:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 114212060551847232, guid: 43a74fb4d7aa4a048918610b65f8ac30,
+        type: 2}
+      propertyPath: nextSceneIndex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43a74fb4d7aa4a048918610b65f8ac30, type: 2}
   m_IsPrefabParent: 0
